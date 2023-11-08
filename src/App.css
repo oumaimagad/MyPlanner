@@ -1,38 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffff;
+  display: flex;
+
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+ 
+}
+#to{
+    justify-content: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+#side{
+   /* width:100vh;  */
+  height:100vh;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  color: #4b4b4b;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.TodoWrapper {
+  background: rgb(255, 192, 224);
+  margin-top: 5rem;
+  padding: 4rem;
+  margin-left: 250px;
+  border-radius: 5px;
+}
+
+.TodoForm {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.todo-input {
+  outline: none;
+  background: none;
+  /* border: 1px solid rgb(241, 196, 241); */
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 400px;
+  color: #000;
+}
+
+.todo-input::placeholder {
+  color: #4b4b4b;
+}
+
+.todo-btn {
+  background: #4b4b4b;
+  border-radius: 10px;
+  color: #fff;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+}
+
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4b4b4b;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.fa-trash {
+  margin-left: 0.75rem;
+}
+
+.incompleted {
+  color: #fff;
+  cursor: pointer;
+}
+
+.completed {
+  color: #c5aeff;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+}
+
+.Sidebar{
+  height:100% ;
+  width: 200px;
+  background-color: rgb(255, 192, 224);
+}
+.SidebarTitle {
+    padding: 5px; /* Ajoute un peu d'espace autour du titre */
+    background-color: rgb(255, 192, 224); /* Couleur de fond */
+    color:  #000; /* Couleur du texte */
+   text-align: center; /* Centre le texte horizontalement */
+    font-size: 10px; /* Taille de la police */
+    border-bottom: 1px solid  #4b4b4b; /* Bordure en bas */
+    margin-bottom: 10px; /* Ajoute un peu d'espace en dessous du titre */
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.SidebarList {
+  height:100%;
+  padding: 0%;
+  width: 100%;
+  color:#000;
+}
+
+.SidebarList .row {
+    width: 100%;
+    height: 60px;
+    list-style-type: none;
+    margin: 0%;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    font-family:'Trebuchet MS','Lucida Sans Unicode', 'Lucida Grande','Lucida Sans',Arial, sans-serif  ;
+}
+
+.SidebarList .row:hover{
+  cursor:pointer;
+  background-color:rgb(206, 157, 184);
+}
+
+.SidebarList #active {
+  background-color:rgb(206, 157, 184);
+}
+
+.row #icon {
+  flex: 30%; 
+  display:grid;
+  place-items:center;
+}
+
+.row #title{
+  flex: 70%;
+}
+#plan{
+  font-size: 20px;
+  color: #000;
 }
